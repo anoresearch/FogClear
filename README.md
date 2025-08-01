@@ -1,4 +1,4 @@
-# Fog Training v4 for Long‑Tail CIFAR-100
+# FogClear for Long‑Tail CIFAR-100
 
 This repository contains the implementation of **Fog Training v4**, a two-stage entropy‑regularized framework for long‑tail learning on CIFAR‑100‑LT. Stage‑A stabilizes early learning by leveraging predictive uncertainty, and Stage‑B fine‑tunes with adaptive margins and dynamic sample/class weighting.
 
