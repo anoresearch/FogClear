@@ -50,7 +50,7 @@ python first-stage-training.py \
 
 - **Output**: `./exp/stage_1/model.pth` (naïve fog‑phase model)
 
-### 2. Stage‑B: IWB‑Style Fine‑Tuning
+### 2. Stage-B: Fog Clearing & Adaptive Margin Fine-Tuning
 
 Loads the Stage‑A checkpoint, then applies adaptive margin and dynamic weighting.
 
