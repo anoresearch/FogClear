@@ -37,10 +37,10 @@ This stage performs cross‑entropy with logit adjustment, fog‑temperature sca
 python first-stage-training.py \
   --device_id 0 \
   --dataset CIFAR100_LT \
-  --bs 64 \
+  --bs 128 \
   --lr 0.1 \
   --num_workers 4 \
-  --momentum 0.9 \
+  --momentum 0.95 \
   --weight_decay 5e-3 \
   --num_classes 100 \
   --num_epochs 200 \
@@ -58,13 +58,13 @@ Loads the Stage‑A checkpoint, then applies adaptive margin and dynamic weighti
 python second-stage-training.py \
   --device_id 0 \
   --dataset CIFAR100_LT \
-  --bs 64 \
+  --bs 128 \
   --lr 0.1 \
   --num_workers 4 \
-  --momentum 0.9 \
+  --momentum 0.95 \
   --weight_decay 5e-3 \
   --num_classes 100 \
-  --num_epochs 80 \
+  --num_epochs 40 \
   --pretrain True \
   --imb_type exp \
   --imb_factor 0.01
@@ -79,13 +79,13 @@ All scripts support the following arguments:
 ```text
 --device_id         CUDA device index (default: "0")
 --dataset           Dataset name (CIFAR100_LT or CIFAR10_LT)
---bs                Mini‑batch size (default: 64)
+--bs                Mini‑batch size (default: 128)
 --lr                Learning rate (default: 0.1)
 --num_workers       DataLoader workers (default: 4)
 --momentum          SGD momentum (default: 0.9)
 --weight_decay      Weight decay (default: 5e-3)
 --num_classes       Number of classes (default: 100)
---num_epochs        Number of epochs (default: 200 for Stage‑A; 80 for Stage‑B)
+--num_epochs        Number of epochs (default: 200 for Stage‑A; 40 for Stage‑B)
 --pretrain          Load Stage‑A model in Stage‑B (True/False)
 --imb_type          Imbalance type: 'exp' or 'none'
 --imb_factor        Imbalance factor (default: 1.0)
