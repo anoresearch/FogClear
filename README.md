@@ -5,7 +5,7 @@ This repository contains the implementation of **Fog Training v4**, a two-stage 
 ## Repository Structure
 
 ```plaintext
-fog-training-v4/
+fog-training/
 ├── configs/
 │   └── config.py               # Hyperparameter & path settings
 ├── scripts/
