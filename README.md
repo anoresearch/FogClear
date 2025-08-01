@@ -11,19 +11,12 @@ fog-training-v4/
 ├── scripts/
 │   ├── first-stage-training.py # Stage-A training script
 │   ├── second-stage-training.py# Stage-B training script
-│   └── inference.py            # Inference script
 ├── src/
 │   ├── data_loader.py          # Data loader module
 │   ├── evaluation.py           # Evaluation functions module
 │   ├── model.py                # Model definition module
-│   ├── utils.py                # Utility functions module
-│   ├── README.md               # Project documentation (copy)
-│   └── requirements.txt        # Dependency list
-├── notebooks/                  # (optional) analysis/visualization notebooks
-├── tests/                      # (optional) unit tests
-├── exp/                        # Checkpoints & logs
-│   ├── stage_1/
-│   └── stage_2/
+│   └── utils.py                # Utility functions module
+├── requirements.txt            # Dependency list
 └── README.md                   # Top-level documentation
 ```
 
